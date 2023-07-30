@@ -1,10 +1,22 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
+import Header from "../../components/Header"
+import FooterForm from "../../components/FooterForm"
+import SideBar from "../../components/SideBar"
 
-const inter = Inter({ subsets: ['latin'] })
-
-export default function post() {
+function post() {
   return (
-    <p>sss</p>
+    <>
+      <Header />
+      <main className="md:container md:mx-auto">
+            <div className="flex flex-row-reverse">
+                <SideBar/>
+                <div className="mt-10 ml-5 mr-3 w-full rounded-md">
+                  
+                </div>
+            </div>
+        </main>
+      <FooterForm />
+    </>
     )
 }
+
+export default post;
