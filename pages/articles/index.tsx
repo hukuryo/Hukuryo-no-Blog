@@ -1,9 +1,9 @@
-import Header from "../components/Header"
-import FooterForm from "../components/FooterForm"
-import SideBar from "../components/SideBar"
+import Header from "@/components/Header"
+import FooterForm from "@/components/FooterForm"
+import SideBar from "@/components/SideBar"
 import PageTitle from "@/components/PageTitle";
 
-function Home() {
+function articles() {
     return (
         <>
             <Header />
@@ -12,7 +12,7 @@ function Home() {
                     <SideBar/>
                     <div className="mt-10 mr-3 ml-5 w-full rounded-md">
                         <div>
-                            <PageTitle title={"読んだ書籍一覧"}/>
+                            <PageTitle title={"技術記事一覧"}/>
                         </div>
                         <FooterForm />
                     </div>
@@ -22,4 +22,4 @@ function Home() {
     )
 }
 
-export default Home;
+export default articles;

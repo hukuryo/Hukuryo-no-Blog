@@ -1,9 +1,16 @@
-import Header from "../components/Header"
-import FooterForm from "../components/FooterForm"
-import SideBar from "../components/SideBar"
+import { useEffect, useState } from "react";
+import Header from "../../components/Header"
+import FooterForm from "../../components/FooterForm"
+import SideBar from "../../components/SideBar"
 import PageTitle from "@/components/PageTitle";
+import ArticleList from "@/components/ArticleList";
 
-function Home() {
+import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
+import { cookies } from "next/headers";
+
+
+function Books() {
+
     return (
         <>
             <Header />
@@ -12,7 +19,7 @@ function Home() {
                     <SideBar/>
                     <div className="mt-10 mr-3 ml-5 w-full rounded-md">
                         <div>
-                            <PageTitle title={"読んだ書籍一覧"}/>
+                            <PageTitle title={"オススメの記事一覧"}/>
                         </div>
                         <FooterForm />
                     </div>
@@ -22,4 +29,4 @@ function Home() {
     )
 }
 
-export default Home;
+export default Books;
